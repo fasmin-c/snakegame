@@ -1,6 +1,4 @@
 import java.awt.BorderLayout;
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -20,7 +18,7 @@ public class Game extends Board {
        }
      });
      frame.add(aboutButton, BorderLayout.PAGE_END);
-    frame.pack();
+     frame.pack();
      frame.setLocationRelativeTo(null);
   }
 }

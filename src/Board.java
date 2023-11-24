@@ -193,11 +193,11 @@ public class Board extends JPanel implements ActionListener {
             running = false;
         }
         // check if head touches top border
-        if (snake.getX()[0] < 0) {
+        if (snake.getY()[0] < 0) {
             running = false;
         }
         // check if head touches bottom border
-        if (snake.getX()[0] > BOARD_HIGHT) {
+        if (snake.getY()[0] > BOARD_HIGHT) {
             running = false;
         }
 

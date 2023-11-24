@@ -1,6 +1,7 @@
 import java.util.Random;
 
 public class Apple implements Food {
+
     private int apple_x;
     private int apple_y;
     private int applesEaten = 0;
@@ -9,10 +10,10 @@ public class Apple implements Food {
     private int CELL_SIZE;
     private int BOARD_HIGHT;
 
-    public Apple(int bOARD_WIDTH, int bOARD_HIGHT, int cELL_SIZE) {
-        BOARD_WIDTH = bOARD_WIDTH;
-        CELL_SIZE = cELL_SIZE;
-        BOARD_HIGHT = bOARD_HIGHT;
+    public Apple(int boardwidth, int boardhight, int cellsize) {
+        BOARD_WIDTH = boardwidth;
+        CELL_SIZE = cellsize;
+        BOARD_HIGHT = boardhight;
         random = new Random();
     }
 

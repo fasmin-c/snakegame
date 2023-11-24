@@ -1,11 +1,9 @@
 public class Snake {
     private static int lengthOfSnake = 6;
-    private int MAX_SIZE;
     private int x[];
     private int y[];
 
     public Snake(int maxSize) {
-        this.MAX_SIZE = maxSize;
         x = new int[maxSize];
         y = new int[maxSize];
     }
