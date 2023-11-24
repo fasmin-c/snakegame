@@ -54,8 +54,10 @@ public class Board extends JPanel implements ActionListener {
     public void togglePaused() {
         gamePaused = !gamePaused;
         if (gamePaused) {
-            timer.stop();
+            sound.endBackground();
+            timer.stop();         
         } else {
+            sound.startBackgroundMusic();
             timer.start();
         }
     }
@@ -69,6 +71,7 @@ public class Board extends JPanel implements ActionListener {
                 int key = e.getKeyCode();
                 if (key == KeyEvent.VK_P) {
                     togglePaused();
+                      
                 }
 
                 if (key == KeyEvent.VK_LEFT) {
