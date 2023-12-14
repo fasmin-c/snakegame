@@ -9,14 +9,14 @@ public class Apple implements Food {
     private int BOARD_WIDTH;
     private int CELL_SIZE;
     private int BOARD_HIGHT;
-
+   // Apple constructor adds the BOARD_WIDTH, BROAD_HIGHT and CELL_SIZE
+   // that are needed to generate the X and Y of apple position.
     public Apple(int boardwidth, int boardhight, int cellsize) {
         BOARD_WIDTH = boardwidth;
         CELL_SIZE = cellsize;
         BOARD_HIGHT = boardhight;
         random = new Random();
     }
-
     public int getApple_x() {
         return apple_x;
     }
@@ -33,6 +33,7 @@ public class Apple implements Food {
         this.applesEaten = applesEaten;
     }
 
+    // newFood randomly generate X and Y location for apple in the board
     @Override
     public void newFood() {
         apple_x = random.nextInt((int) (BOARD_WIDTH / CELL_SIZE)) * CELL_SIZE;

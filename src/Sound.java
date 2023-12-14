@@ -12,7 +12,7 @@ public class Sound {
 
     public void startBackgroundMusic() {
         try {
-            AudioInputStream audioin = AudioSystem.getAudioInputStream(new File("sound/snake-pit-74085.wav"));
+            AudioInputStream audioin = AudioSystem.getAudioInputStream(new File("Sound/Fluffing-a-Duck.wav"));
             clip = AudioSystem.getClip();
             clip.open(audioin);
             clip.start();

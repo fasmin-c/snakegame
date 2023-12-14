@@ -61,17 +61,19 @@ public class Board extends JPanel implements ActionListener {
             timer.start();
         }
     }
-
+    // initBoard set the size and background color of the BOARD.
+    // it also implements the KeyListener.
     private void initBoard() {
         this.setPreferredSize(new Dimension(BOARD_WIDTH, BOARD_HIGHT));
         this.setBackground(Color.GREEN);
         this.setFocusable(true);
+        // addKeyListener methods adds the KeyAdapter listener interface for receiving keyboard events (keystrokes)
+        // and do different functions depending on the key pressed.
         addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
                 int key = e.getKeyCode();
                 if (key == KeyEvent.VK_P) {
-                    togglePaused();
-                      
+                    togglePaused();                   
                 }
 
                 if (key == KeyEvent.VK_LEFT) {
@@ -105,7 +107,8 @@ public class Board extends JPanel implements ActionListener {
         });
 
     }
-
+    // initGame adds an apple at random location on the board, set the game as running and
+    // start the timer with default delay. 
     void initGame() {
         food.newFood();
         running = true;
@@ -113,6 +116,8 @@ public class Board extends JPanel implements ActionListener {
         timer.start();
     }
 
+    // restartGame restarts the game by resetting the snake size and its positions
+    // diection of the snake, speed of the snake as initial delay, and resetting the apples eaten.
     public void restartGame() {
         Snake.setLengthOfSnake(6);
         snake.setX(new int[MAX_SIZE]);
@@ -127,12 +132,11 @@ public class Board extends JPanel implements ActionListener {
         food.newFood();
         sound.startBackgroundMusic();
     }
-
+    // paintComponent the function in JComponents is overridden here to add additional styling.
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         doDrawing(g);
-
     }
 
     private void doDrawing(Graphics g) {
